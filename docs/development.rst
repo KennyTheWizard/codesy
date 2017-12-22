@@ -64,17 +64,9 @@ is to run ``stunnel`` on https://127.0.0.1:8443 in front of Django:
 
 #. First, `install stunnel`_ for your OS (E.g., on Mac OS ``brew install stunnel``).
 
-#. Run Django dev server **in HTTPS mode** on port 5000::
+#. Run stunnel with the included ``dev_https`` config and run Django dev server **in HTTPS mode** on port 5000::
 
-    HTTPS=1 ./manage.py runserver 127.0.0.1:5000
-
-#. Generate local cert and key file for stunnel::
-
-    openssl req -new -x509 -days 9999 -nodes -out stunnel/stunnel.pem -keyout stunnel/stunnel.pem
-
-#. Run stunnel with the included ``dev_https`` config::
-
-    stunnel stunnel/dev_https
+    stunnel stunnel/dev_https & HTTPS=1 ./manage.py runserver 127.0.0.1:5000
 
 #. Go to https://127.0.0.1:8443 and confirm the certificate exception.
 
