@@ -21,7 +21,13 @@
             <div class="top-bar-left">
                 <a href="/"><img src="{% static "img/codesy_300dpi_323x80.png" %}" width="161" height="40"/></a>
             </div>
+
             <div class="top-bar-right">
+                <div class="">
+                    <a class="hollow button" href="#how_it_works">how?</a>
+                    <a class="hollow button" href="#faq">about</a>
+                </div>
+
                 <ul class="dropdown menu" data-dropdown-menu="data-dropdown-menu">
                 {% if user.is_authenticated %}
                     <li>
