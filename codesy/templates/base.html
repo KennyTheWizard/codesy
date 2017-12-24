@@ -26,8 +26,8 @@
                 <div class="">
                     <a class="hollow button" href="#how_it_works">how?</a>
                     <a class="hollow button" href="#faq">about</a>
+                    <a class="button gh-button track-btn" data-category="sign-in" href="{% provider_login_url "github" %}"><i class="fi-social fi-social-github medium"></i> Signin/Register</a>
                 </div>
-
                 <ul class="dropdown menu" data-dropdown-menu="data-dropdown-menu">
                 {% if user.is_authenticated %}
                     <li>
